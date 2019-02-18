@@ -1,0 +1,79 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='description' content='')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title ronboehm art
+  link(rel='apple-touch-icon' href='apple-touch-icon.png')
+  // Place favicon.ico in the root directory
+
+  // build:css styles/main.css
+  link(rel='stylesheet' href='styles/main.css')
+  // endbuild
+
+  <!--[if lt IE 10]>
+    p.browserupgrade
+      | You are using an #[strong outdated browser].
+      | Please #[a(href='http://browsehappy.com/') upgrade your browser] to improve your experience.
+  <![endif]-->
+  
+  //- TODO: audit use of font-weights
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300,400,700|Rock+Salt')
+  //- Other options:
+  //- https://fonts.google.com/selection?query=raleway&category=Serif,Sans+Serif&selection.family=Abril+Fatface|Pinyon+Script|Poiret+One|Rock+Salt
+
+body
+  .wrapper
+    header.info
+      h1 Ron Boehm
+      a(mailto='example@email.com') example@email.com
+      a(href='tel:01234567890') 012.345.6789
+    main.art
+      article
+        img.img-fluid(src='images/art/20180711_094717.jpg')
+        h2 title
+      article
+        img.img-fluid(src='images/art/20180711_110523.jpg')
+        h2 title
+    //- .contact
+      form(action='https://formspree.io/david+ronboehm@808loud.com' method='POST')
+        .form-group
+          label(for='name') Name
+          input#name.form-control(
+            type='text'
+            name='name'
+            placeholder='Your name'
+            required)
+        .form-group
+          label(for='email') Email address
+          input#email.form-control(
+            type='email'
+            name='email'
+            placeholder='Enter email'
+            required)
+        .form-group
+          label(for='message') Message
+          textarea#message.form-control(
+            rows='3'
+            required)
+        input.d-none(type='text' name='_gotcha')
+        input(type='hidden' name='_subject' value='Artwork inquiry')
+        button.btn.btn-primary(type='submit' value='Send') Submit
+
+  // Google Analytics: change UA-XXXXX-X to be your site's ID.
+  script.
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+
+  // build:js scripts/vendor.js
+  //- script(type='text/javascript' src='/node_modules/jquery/dist/jquery.slim.min.js')
+  //- script(type='text/javascript' src='/node_modules/bootstrap/dist/js/bootstrap.min.js')
+  // endbuild
+
+  // build:js scripts/main.js
+  //- script(src='scripts/main.js')
+  // endbuild
