@@ -22,12 +22,6 @@ head
   // build:css styles/main.css
   link(rel='stylesheet' href='styles/main.css')
   // endbuild
-
-  <!--[if lt IE 10]>
-    p.browserupgrade
-      | You are using an #[strong outdated browser].
-      | Please #[a(href='http://browsehappy.com/') upgrade your browser] to improve your experience.
-  <![endif]-->
   
   link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400|Rock+Salt')
   //- Other options:
@@ -50,6 +44,13 @@ body
       img.gallery(src='images/art/20180711_110532.jpg')
       figcaption title
 
+  <!--[if lt IE 10]>
+  p.browserupgrade
+    | You are using an outdated browser.
+    | Please #[a(href='http://browsehappy.com/' target='_blank') upgrade your browser]
+    | to improve your experience.
+  <![endif]-->
+  
   // Google Analytics: change UA-XXXXX-X to be your site's ID.
   script.
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
