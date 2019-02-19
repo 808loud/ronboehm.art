@@ -1,0 +1,12 @@
+.gallery {
+  height: auto;
+  max-height: calc(100vh - calc(1rem + #{$caption-fontSize} * #{$caption-lineHeight} + 2 * #{$caption-marginTop});
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  & + figure {
+    margin-top: 6rem;
+  }
+}

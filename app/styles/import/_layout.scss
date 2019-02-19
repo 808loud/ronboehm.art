@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  @media (max-width: $breakpoint) {
+    flex-direction: column;
+  }
+  height: 100%;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  padding: 1rem;
+  @media (min-width: $breakpoint) {
+    flex-direction: column;
+    align-items: stretch;
+    height: 100vh;
+    padding-right: 0;
+    z-index: 1;
+  }
+  h1 {
+    white-space: nowrap;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.art {
+  overflow-y: auto;
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: $breakpoint) {
+    padding-top: 0;
+  }
+  // scroll-snap-type: y proximity;
+  // scroll-padding: 1rem;
+  // article {
+  //   scroll-snap-align: start;
+  // }
+}
