@@ -168,6 +168,14 @@ if (isDev) {
   serve = series(build, startDistServer);
 }
 
+function ghPages() {
+  return src('dist/**/*')
+    .pipe($.ghPages());
+};
+
+const deploy = series(build, ghPages);
+
 exports.serve = serve;
 exports.build = build;
+exports.deploy = deploy;
 exports.default = build;
