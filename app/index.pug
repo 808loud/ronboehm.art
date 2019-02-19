@@ -18,47 +18,50 @@ head
   <![endif]-->
   
   //- TODO: audit use of font-weights
-  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300,400,700|Rock+Salt')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400|Rock+Salt')
   //- Other options:
   //- https://fonts.google.com/selection?query=raleway&category=Serif,Sans+Serif&selection.family=Abril+Fatface|Pinyon+Script|Poiret+One|Rock+Salt
 
 body
-  .wrapper
-    header.info
-      h1 Ron Boehm
-      a(mailto='example@email.com') example@email.com
-      a(href='tel:01234567890') 012.345.6789
-    main.art
-      article
-        img.img-fluid(src='images/art/20180711_094717.jpg')
-        h2 title
-      article
-        img.img-fluid(src='images/art/20180711_110523.jpg')
-        h2 title
-    //- .contact
-      form(action='https://formspree.io/david+ronboehm@808loud.com' method='POST')
-        .form-group
-          label(for='name') Name
-          input#name.form-control(
-            type='text'
-            name='name'
-            placeholder='Your name'
-            required)
-        .form-group
-          label(for='email') Email address
-          input#email.form-control(
-            type='email'
-            name='email'
-            placeholder='Enter email'
-            required)
-        .form-group
-          label(for='message') Message
-          textarea#message.form-control(
-            rows='3'
-            required)
-        input.d-none(type='text' name='_gotcha')
-        input(type='hidden' name='_subject' value='Artwork inquiry')
-        button.btn.btn-primary(type='submit' value='Send') Submit
+  header.info
+    h1 Ron Boehm
+    .contact
+      | &#101;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#101;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
+      a.link-plain(href='tel:01234567890') 012.345.6789
+  main.art
+    figure
+      img.gallery(src='images/art/20180711_094717.jpg')
+      figcaption title
+    figure
+      img.gallery(src='images/art/20180711_110523.jpg')
+      figcaption title
+    figure
+      img.gallery(src='images/art/20180711_110532.jpg')
+      figcaption title
+  //- .contact
+    form(action='https://formspree.io/david+ronboehm@808loud.com' method='POST')
+      .form-group
+        label(for='name') Name
+        input#name.form-control(
+          type='text'
+          name='name'
+          placeholder='Your name'
+          required)
+      .form-group
+        label(for='email') Email address
+        input#email.form-control(
+          type='email'
+          name='email'
+          placeholder='Enter email'
+          required)
+      .form-group
+        label(for='message') Message
+        textarea#message.form-control(
+          rows='3'
+          required)
+      input.d-none(type='text' name='_gotcha')
+      input(type='hidden' name='_subject' value='Artwork inquiry')
+      button.btn.btn-primary(type='submit' value='Send') Submit
 
   // Google Analytics: change UA-XXXXX-X to be your site's ID.
   script.
