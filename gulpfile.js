@@ -37,7 +37,6 @@ function scripts() {
   return src('app/scripts/**/*.js')
     .pipe($.plumber())
     .pipe($.if(!isProd, $.sourcemaps.init()))
-    .pipe($.babel())
     .pipe($.if(!isProd, $.sourcemaps.write('.')))
     .pipe(dest('.tmp/scripts'))
     .pipe(server.reload({stream: true}));
