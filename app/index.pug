@@ -34,15 +34,86 @@ body
       | &#101;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#101;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
       a.link-plain(href='tel:01234567890') 012.345.6789
   main.art
-    figure
-      img.gallery(src='images/art/20180711_094717.jpg')
-      figcaption title
-    figure
-      img.gallery(src='images/art/20180711_110523.jpg')
-      figcaption title
-    figure
-      img.gallery(src='images/art/20180711_110532.jpg')
-      figcaption title
+    -
+      var art = [
+        {
+          'title': 'Example title 20180711_094717',
+          'img': '20180711_094717.jpg'
+        }, {
+          'title': 'Example title 20180711_110523',
+          'img': '20180711_110523.jpg'
+        }, {
+          'title': 'Example title 20180711_110532',
+          'img': '20180711_110532.jpg'
+        }, {
+          'title': 'Example title 20180711_110637',
+          'img': '20180711_110637.jpg'
+        }, {
+          'title': 'Example title 20180711_110731',
+          'img': '20180711_110731.jpg'
+        }, {
+          'title': 'Example title 20180711_110801',
+          'img': '20180711_110801.jpg'
+        }, {
+          'title': 'Example title 20180711_112349',
+          'img': '20180711_112349.jpg'
+        }, {
+          'title': 'Example title 20180719_114245',
+          'img': '20180719_114245.jpg'
+        }, {
+          'title': 'Example title 20180724_140237',
+          'img': '20180724_140237.jpg'
+        }, {
+          'title': 'Example title 20180729_115211',
+          'img': '20180729_115211.jpg'
+        }, {
+          'title': 'Example title 20180827_125613',
+          'img': '20180827_125613.jpg'
+        }, {
+          'title': 'Example title 20180827_125717',
+          'img': '20180827_125717.jpg'
+        }, {
+          'title': 'Example title 20180827_125750',
+          'img': '20180827_125750.jpg'
+        }, {
+          'title': 'Example title 20180827_130017',
+          'img': '20180827_130017.jpg'
+        }, {
+          'title': 'Example title 20181126_160321',
+          'img': '20181126_160321.jpg'
+        }, {
+          'title': 'Example title 20181126_160417',
+          'img': '20181126_160417.jpg'
+        }, {
+          'title': 'Example title 20181126_160438',
+          'img': '20181126_160438.jpg'
+        }, {
+          'title': 'Example title 20181126_160450',
+          'img': '20181126_160450.jpg'
+        }, {
+          'title': 'Example title 20181126_160512',
+          'img': '20181126_160512.jpg'
+        }, {
+          'title': 'Example title 20181126_160532',
+          'img': '20181126_160532.jpg'
+        }, {
+          'title': 'Example title 20181203_105834',
+          'img': '20181203_105834.jpg'
+        }, {
+          'title': 'Example title 20181203_105848',
+          'img': '20181203_105848.jpg'
+        }, {
+          'title': 'Example title 20181203_105913',
+          'img': '20181203_105913.jpg'
+        }, {
+          'title': 'Example title 20181221_162030',
+          'img': '20181221_162030.jpg'
+        }
+      ]
+    each item in art
+      figure
+        img.gallery(src='images/art/' + item.img)
+        figcaption= item.title
 
   <!--[if lt IE 10]>
   p.browserupgrade
