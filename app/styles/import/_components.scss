@@ -22,6 +22,7 @@
 figure {
   margin: 0;
   & + figure {
-    margin-top: 6rem;
+    margin-top: 5rem;
+    padding-top: 1rem; /* accomodation for on-page anchors */
   }
 }
