@@ -83,10 +83,21 @@ function html() {
 }
 
 function images() {
-  return src('app/images/**/*', { since: lastRun(images) })
+  return src(['app/images/**/*', '!app/images/art'], { since: lastRun(images) })
     .pipe($.imagemin())
     .pipe(dest('dist/images'));
 };
+
+function saveForWeb() {
+  return src('app/images/art/**/*', { since: lastRun(saveForWeb) })
+    .pipe($.jimp({
+      '': {
+        greyscale: true
+      }
+    }))
+    .pipe($.imagemin())
+    .pipe(dest('dist/images'));
+}
 
 function fonts() {
   return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2}')
@@ -117,6 +128,7 @@ const build = series(
     lint,
     series(parallel(styles, scripts, views), html),
     images,
+    saveForWeb,
     fonts,
     extras
   ),
